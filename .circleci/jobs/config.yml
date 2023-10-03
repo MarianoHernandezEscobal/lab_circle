@@ -182,6 +182,7 @@ jobs:
       - run: |
           echo 'export S3_ORIGIN_BUCKET=$(echo $S3_ORIGIN<< parameters.env_suffix >>)' >> $BASH_ENV
           echo 'export WEBSITE_SITE_URL=$(echo https://$ENVIRONMENT_DOMAIN<< parameters.env_suffix >>)' >> $BASH_ENV
+          echo 'export AWS_SESSION_TOKEN=$(echo AWS_SESSION_TOKEN) >> $BASH_ENV
       - run:
           name: Deploying artifact
           command: bash .circleci/scripts/deploy.sh
