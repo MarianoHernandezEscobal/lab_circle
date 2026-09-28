@@ -20,3 +20,6 @@ S3_ORIGIN_PROD = XXX
 
 // for auto tagging
 GITHUB_PROJECT = https://github.com/xxx/xxxxx
+
+
+
